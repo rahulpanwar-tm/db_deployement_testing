@@ -10,7 +10,7 @@
 #declare -a Array50
 #Array50=( "key1" "key2" "key3" "key4" "key5" "key6" "key7" "key8" "key9" "key10" )
 
-declare -a Array1
+#declare -a Array1
 for filename in /home/ttpl/shell_scripting/*.sql; do
 #   echo  "$(basename "$filename")"
 #    Array50=$(basename "$filename")
