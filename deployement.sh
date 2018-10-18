@@ -15,7 +15,7 @@ for filename in /home/ttpl/shell_scripting/*.sql; do
 #   echo  "$(basename "$filename")"
 #    Array50=$(basename "$filename")
 #    Array1=("${Arry50[@]}" "$filename")
- Array1=("${Array1[@]}" "$(basename "$filename")")
+ Array1=("${Array1[@]}" $(basename "$filename"))
 #Array1=("${Array1[@]}" "$filename")
 
 done
