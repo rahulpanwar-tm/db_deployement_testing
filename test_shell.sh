@@ -15,7 +15,8 @@ for filename in /home/ttpl/.jenkins/workspace/Database_automation_testing/*.sql;
 #    Array1=("${Arry50[@]}" "$filename")
 # Array1=("${Array1[@]}" $(basename "$filename"))
 #Array1=("${Array1[@]}" "$filename")
-echo "$filename"
+#echo "$filename"
+ echo  "$(basename "$filename")"
 
 done
 
