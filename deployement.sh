@@ -1,4 +1,5 @@
 #!/bin/sh
+#!/usr/bin/env bash
 
 # Author : Zara Ali
 # Copyright (c) Tutorialspoint.com
