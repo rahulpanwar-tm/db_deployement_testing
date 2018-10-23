@@ -1,5 +1,5 @@
 #!/bin/sh
-
+#!/usr/bin/env bash
 # Author : Zara Ali
 # Copyright (c) Tutorialspoint.com
 # Script follows here:
@@ -11,14 +11,34 @@
 #Array50=( "key1" "key2" "key3" "key4" "key5" "key6" "key7" "key8" "key9" "key10" )
 
 #declare -a Array1
-for filename in /home/ttpl/.jenkins/workspace/Database_automation_testing/*.sql; do
+for filename in /home/ttpl/shell_scripting/*.sql; do
 #   echo  "$(basename "$filename")"
 #    Array50=$(basename "$filename")
 #    Array1=("${Arry50[@]}" "$filename")
- Array1=("${Array1[@]}" $(basename "$filename"))
+#file_basename= "$(basename "$filename")" 
+
+Array1=("${Array1[@]}" "$(basename "$filename")")
+
+#temp_file="${filename##*/}"
+
+#echo "${temp_file%.*}"
+#Array1=${Array1[@]} "${temp_file%.*}"
+
+#Array1+=(basename"$filename")
 #Array1=("${Array1[@]}" "$filename")
 
 done
+
+echo "$items"
+
+#array654=(/home/ttpl/shell_scripting/*.sql)
+
+#echo ($array654)
+
+#files=(/home/ttpl/shell_scripting/*.sql; ) for file in "${files[@]}" do filename="${file##*/}" filenameWithoutExtension="${filename%.*}" echo "$filenameWithoutExtension" done
+
+
+
 #echo ${Array1[@]}
 #echo ${Array50[@]}
 #declare -p arr
@@ -36,7 +56,7 @@ done
 
 #done
 
-
+#Array1=("${Array1[@]}" "$(basename "$filename")")
 #list="11 22 33"
 #x="batch_06102018.txt"
 
@@ -62,7 +82,7 @@ done
 
 #Array1=( "key1" "key2" "key3" "key4" "key5" "key6" "key7" "key8" "key9" "key10" )
 #Array2=( "key1" "key2" "key3" "key4" "key5" "key6" )
-Array2=($(mysql -udeveloper -padmin@123 -c -h 192.168.1.122 -Bse "use deployement_status; call deployement_status.database_deployement_version_get_all('Exicom','Xfusion_Platform');"))
+Array2=($(mysql -u$USERID --port $PORT  -p$PASSWORD -c -h $IPADDRESS   -Bse "use deployement_status; call deployement_status.database_deployement_version_get_all('Exicom','Xfusion_Platform');"))
 echo ${Array2[@]}
 
 
@@ -107,14 +127,14 @@ echo "print diffrent version "
 
 for i in "${Array3[@]}"
 do
-   echo  "mysql -udeveloper -padmin@123 -c -h 192.168.1.122 -Bse $i" 
-   mysql -udeveloper -padmin@123 -c -h 192.168.1.122 -e "source $i;"
-   mysql -udeveloper -padmin@123 -c -h 192.168.1.122 -e "use deployement_status; call database_deployement_version_insert('Exicom','Xfusion_Platform','$i');"
+   #echo  "mysql -udeveloper -padmin@123 -c -h 192.168.1.122 -Bse $i" 
+   mysql -u$USERID --port $PORT  -p$PASSWORD-c -h $IPADDRESS -e "source $i;"
+   mysql -u$USERID --port $PORT  -p$PASSWORD -c -h $IPADDRESS -e "use deployement_status; call database_deployement_version_insert('Exicom','Xfusion_Platform','$i');"
    # or do whatever with individual element of the array
 done
 
 
-
+echo "$MESSAGE"
 
 
 
