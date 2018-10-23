@@ -29,9 +29,9 @@ Array1=("${Array1[@]}" "$(basename "$filename")")
 #Array1+=(basename"$filename")
 #Array1=("${Array1[@]}" "$filename")
 
-done
+#done
 
-echo "$items"
+#echo "$items"
 
 #array654=(/home/ttpl/shell_scripting/*.sql)
 
