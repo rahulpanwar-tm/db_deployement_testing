@@ -93,7 +93,7 @@ done
 #Array2=($(mysql -u$USERID --port $PORT  -p$PASSWORD -c -h $IPADDRESS   -Bse "use deployement_status; call deployement_status.database_deployement_version_get_all('Exicom','Xfusion_Platform');"))
 
 
-Array2=($(mysql -udeveloper -padmin@123 -c -h 192.168.1.122 -Bse "show databases;"))
+Array2=($(mysql -udeveloper -padmin@123 -c -h 192.168.1.122 -Bse "use deployement_status; call deployement_status.database_deployement_version_get_all('Exicom','Xfusion_Platform');"))
 echo ${Array2[@]}
 #cnt=${#Array2[@]}                                                           
 #echo $cnt
