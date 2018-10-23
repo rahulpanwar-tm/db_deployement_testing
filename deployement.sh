@@ -1,5 +1,12 @@
 #!/bin/sh
 #!/usr/bin/env bash
+<<<<<<< HEAD
+=======
+
+# Author : Zara Ali
+# Copyright (c) Tutorialspoint.com
+# Script follows here:
+>>>>>>> 74ea730fb43912595ea70d1de45a39ae49bfb1a4
 
 #echo "What is your name?"
 #read PERSON
@@ -8,10 +15,18 @@
 #Array50=( "key1" "key2" "key3" "key4" "key5" "key6" "key7" "key8" "key9" "key10" )
 
 #declare -a Array1
+<<<<<<< HEAD
 for filename in /home/ttpl/shell_scripting/*.sql; do
 #   echo  "$(basename "$filename")"
 #    Array50=$(basename "$filename")
 #    Array1=("${Arry50[@]}" "$filename")
+=======
+for filename in /home/ttpl/.jenkins/workspace/Database_automation_testing/*.sql; do
+#   echo  "$(basename "$filename")"
+#    Array50=$(basename "$filename")
+#    Array1=("${Arry50[@]}" "$filename")
+
+>>>>>>> 74ea730fb43912595ea70d1de45a39ae49bfb1a4
 #file_basename= "$(basename "$filename")" 
 
 Array1=("${Array1[@]}" "$(basename "$filename")")
@@ -26,7 +41,7 @@ Array1=("${Array1[@]}" "$(basename "$filename")")
 
 done
 
-echo "$items"
+#echo "$items"
 
 #array654=(/home/ttpl/shell_scripting/*.sql)
 
@@ -36,6 +51,15 @@ echo "$items"
 
 
 
+<<<<<<< HEAD
+=======
+
+#Array1=("${Array1[@]}" $(basename "$filename"))
+#Array1=("${Array1[@]}" "$filename")
+
+#done
+
+>>>>>>> 74ea730fb43912595ea70d1de45a39ae49bfb1a4
 #echo ${Array1[@]}
 #echo ${Array50[@]}
 #declare -p arr
