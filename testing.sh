@@ -9,6 +9,13 @@
 # PORT="3306"
 # echo "$MESSAGE"
 
+MESSAGE="$IN_MESSAGE"
+IPADDRESS="$IN_IPADDRESS"
+USERID="$IN_USERID"
+PASSWORD="$IN_PASSWORD"
+PORT="$IN_PORT"
+echo "$MESSAGE"
+
 . ./deployement.sh
 
 #echo "This script has just run another script."
