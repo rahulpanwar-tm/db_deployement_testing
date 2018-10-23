@@ -8,7 +8,6 @@ USERID="developer"
 PASSWORD="admin@123"
 PORT="3306"
 echo "$MESSAGE"
-bash ./deployement.sh
 
 . ./deployement.sh
 
