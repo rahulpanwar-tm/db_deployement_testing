@@ -90,15 +90,16 @@ done
 
 #Array1=( "key1" "key2" "key3" "key4" "key5" "key6" "key7" "key8" "key9" "key10" )
 #Array2=( "key1" "key2" "key3" "key4" "key5" "key6" )
-Array2=($(mysql -u$USERID --port $PORT  -p$PASSWORD -c -h $IPADDRESS   -Bse "use deployement_status; call deployement_status.database_deployement_version_get_all('Exicom','Xfusion_Platform');"))
-echo ${Array2[@]}
+#Array2=($(mysql -u$USERID --port $PORT  -p$PASSWORD -c -h $IPADDRESS   -Bse "use deployement_status; call deployement_status.database_deployement_version_get_all('Exicom','Xfusion_Platform');"))
 
-results=($(mysql -udeveloper -padmin@123 -c -h 192.168.1.122 -Bse "show databases;"))
-cnt=${#results[@]}                                                           
-echo $cnt
-for (( i=0 ; i<cnt ; i++ ))                                                    
-do echo "Record No. $i: ${results[$i]}"                                      
-done
+
+Array2=($(mysql -udeveloper -padmin@123 -c -h 192.168.1.122 -Bse "show databases;"))
+echo ${Array2[@]}
+#cnt=${#Array2[@]}                                                           
+#echo $cnt
+#for (( i=0 ; i<cnt ; i++ ))                                                    
+#do echo "Record No. $i: ${results[$i]}"                                      
+#done
 
 
 Array3=()
