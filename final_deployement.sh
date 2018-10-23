@@ -152,7 +152,7 @@ done
 echo "$MESSAGE"
 
 
-mysql -udeveloper -padmin@123 -c -h 192.168.1.122 -e "use deployement_status; select * from version_status;"
+mysql -udeveloper -padmin@123 -c -h 192.168.1.122 -e "use deployement_status; truncate  version_status;"
 
 
 
