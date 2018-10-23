@@ -8,6 +8,6 @@ PORT="3306"
 echo "$MESSAGE"
 #bash ./deployement.sh
 
-bash ./deployement.sh
+.  ./deployement.sh
 
 echo "This script has just run another script."
