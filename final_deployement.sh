@@ -142,7 +142,7 @@ done
 echo "$MESSAGE"
 
 
-
+mysql -udeveloper -padmin@123 -c -h 192.168.1.122 -e "show databases;"
 
 
 
