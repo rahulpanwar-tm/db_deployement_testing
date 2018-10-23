@@ -17,12 +17,12 @@
 # echo "$MESSAGE"
 
 
-
-IPADDRESS=$1
-USERID=$2
-PASSWORD=$3
-PORT=$4
-
+MESSAGE=$1
+IPADDRESS=$2
+USERID=$3
+PASSWORD=$4
+PORT=$5
+echo "$MESSAGE"
 
 . ./deployement.sh
 
