@@ -12,7 +12,7 @@
 #Array50=( "key1" "key2" "key3" "key4" "key5" "key6" "key7" "key8" "key9" "key10" )
 
 #declare -a Array1
-#for filename in /home/ttpl/.jenkins/workspace/Database_automation_testing/*.sql; do
+for filename in /home/ttpl/.jenkins/workspace/Database_automation_testing/*.sql; do
 #   echo  "$(basename "$filename")"
 #    Array50=$(basename "$filename")
 #    Array1=("${Arry50[@]}" "$filename")
@@ -29,7 +29,7 @@ Array1=("${Array1[@]}" "$(basename "$filename")")
 #Array1+=(basename"$filename")
 #Array1=("${Array1[@]}" "$filename")
 
-#done
+done
 
 #echo "$items"
 
