@@ -16,7 +16,7 @@
 #Array50=( "key1" "key2" "key3" "key4" "key5" "key6" "key7" "key8" "key9" "key10" )
 
 
-mysql -udeveloper -padmin@123 -c -h 192.168.1.122 -e "show databases;"
+
 
 #declare -a Array1
 for filename in /home/ttpl/.jenkins/workspace/Database_automation_testing/*.sql; do
@@ -136,7 +136,7 @@ echo "print diffrent version "
 for i in "${Array3[@]}"
 do
    #echo  "mysql -udeveloper -padmin@123 -c -h 192.168.1.122 -Bse $i" 
-   mysql -u$USERID --port $PORT  -p$PASSWORD-c -h $IPADDRESS -e "source $i;"
+   mysql -u$USERID --port $PORT  -p$PASSWORD -c -h $IPADDRESS -e "source $i;"
    mysql -u$USERID --port $PORT  -p$PASSWORD -c -h $IPADDRESS -e "use deployement_status; call database_deployement_version_insert('Exicom','Xfusion_Platform','$i');"
    # or do whatever with individual element of the array
 done
@@ -145,7 +145,7 @@ done
 echo "$MESSAGE"
 
 
-mysql -udeveloper -padmin@123 -c -h 192.168.1.122 -e "show databases;"
+
 
 
 
