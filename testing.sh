@@ -21,7 +21,7 @@ MESSAGE=$1
 IPADDRESS=$2
 USERID=$3
 PASSWORD=$4
-PORT="$5
+PORT=$5
 echo "$MESSAGE"
 
 . ./deployement.sh
