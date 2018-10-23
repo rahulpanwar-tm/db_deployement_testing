@@ -1,9 +1,6 @@
 #!/bin/sh
 #!/usr/bin/env bash
-<<<<<<< HEAD
-=======
 
->>>>>>> b8f97105749463876112e3880a7a3516cdf2cd05
 # Author : Zara Ali
 # Copyright (c) Tutorialspoint.com
 # Script follows here:
