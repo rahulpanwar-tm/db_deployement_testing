@@ -1,5 +1,9 @@
 #!/bin/sh
 #!/usr/bin/env bash
+<<<<<<< HEAD
+=======
+
+>>>>>>> b8f97105749463876112e3880a7a3516cdf2cd05
 # Author : Zara Ali
 # Copyright (c) Tutorialspoint.com
 # Script follows here:
@@ -11,10 +15,11 @@
 #Array50=( "key1" "key2" "key3" "key4" "key5" "key6" "key7" "key8" "key9" "key10" )
 
 #declare -a Array1
-for filename in /home/ttpl/.jenkins/workspace/Database_automation_testing/*.sql; do
+#for filename in /home/ttpl/.jenkins/workspace/Database_automation_testing/*.sql; do
 #   echo  "$(basename "$filename")"
 #    Array50=$(basename "$filename")
 #    Array1=("${Arry50[@]}" "$filename")
+<<<<<<< HEAD
 #file_basename= "$(basename "$filename")" 
 
 Array1=("${Array1[@]}" "$(basename "$filename")")
@@ -39,6 +44,12 @@ echo "$items"
 
 
 
+=======
+#                           Array1=("${Array1[@]}" $(basename "$filename"))
+#Array1=("${Array1[@]}" "$filename")
+
+#done
+>>>>>>> b8f97105749463876112e3880a7a3516cdf2cd05
 #echo ${Array1[@]}
 #echo ${Array50[@]}
 #declare -p arr
