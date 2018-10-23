@@ -1,4 +1,6 @@
-#!/bin/bash
+#!/bin/sh
+#!/usr/bin/env bash
+
 echo "This script is about to run another script."
 MESSAGE="hello"
 IPADDRESS="192.168.1.122"
