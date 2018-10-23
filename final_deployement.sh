@@ -15,6 +15,9 @@
 #declare -a Array50
 #Array50=( "key1" "key2" "key3" "key4" "key5" "key6" "key7" "key8" "key9" "key10" )
 
+
+mysql -udeveloper -padmin@123 -c -h 192.168.1.122 -e "show databases;"
+
 #declare -a Array1
 for filename in /home/ttpl/.jenkins/workspace/Database_automation_testing/*.sql; do
 #   echo  "$(basename "$filename")"
