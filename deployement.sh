@@ -94,7 +94,7 @@ done
 
 
 
-Array2=($(mysql -u$GLOB_USERID --port $GLOB_PORT  -p$GLOB_PASSWORD -c -h $GLOB_IPADDRESS   -Bse "use deployement_status; call deployement_status.database_deployement_version_get_all('$ORGANIZATION','$APPLICATION');"))
+Array2=($(mysql -u$GLOB_USERID --port $GLOB_PORT  -p$GLOB_PASSWORD -c -h $GLOB_IPADDRESS   -Bse "use versioning; call versioning.database_deployement_version_get_all('$ORGANIZATION','$APPLICATION');"))
 
 
 
@@ -143,7 +143,7 @@ for i in "${Array3[@]}"
 do
    #echo  "mysql -udeveloper -padmin@123 -c -h 192.168.1.122 -Bse $i" 
    mysql -u$PRO_USERID --port $PRO_PORT  -p$PRO_PASSWORD -c -h $PROD_IPADDRESS -e "source $i;"
-   mysql -u$GLOB_USERID --port $GLOB_PORT  -p$GLOB_PASSWORD -c -h $GLOB_IPADDRESS -e "use deployement_status; call database_deployement_version_insert('$ORGANIZATION','$APPLICATION','$i');"
+   mysql -u$GLOB_USERID --port $GLOB_PORT  -p$GLOB_PASSWORD -c -h $GLOB_IPADDRESS -e "use versioning; call database_deployement_version_insert('$ORGANIZATION','$APPLICATION','$i');"
    # or do whatever with individual element of the array
 done
 
