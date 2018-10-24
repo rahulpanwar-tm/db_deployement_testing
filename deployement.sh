@@ -18,7 +18,7 @@
 echo "Deployement started for $APPLICATION under $ORGANIZATION"
 
 #declare -a Array1
-for filename in /home/ttpl/shell_scripting/*.sql; do
+for filename in ./*.sql; do
 #   echo  "$(basename "$filename")"
 #    Array50=$(basename "$filename")
 #    Array1=("${Arry50[@]}" "$filename")
