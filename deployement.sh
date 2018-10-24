@@ -94,7 +94,7 @@ done
 
 
 
-Array2=($(mysql -u$USERID --port $PORT  -p$PASSWORD -c -h $IPADDRESS   -Bse "use deployement_status; call deployement_status.database_deployement_version_get_all('$ORGANIZATION','$APPLICATION');"))
+Array2=($(mysql -u$GLOB_USERID --port $GLOB_PORT  -p$GLOB_PASSWORD -c -h $GLOB_IPADDRESS   -Bse "use deployement_status; call deployement_status.database_deployement_version_get_all('$ORGANIZATION','$APPLICATION');"))
 
 
 
